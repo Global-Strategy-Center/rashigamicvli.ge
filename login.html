@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>შესვლა - რაში გამიცვლი</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .box { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); width: 100%; max-width: 400px; }
+        h2 { color: #27ae60; text-align: center; margin-top: 0; }
+        label { display: block; margin-top: 15px; font-weight: 600; }
+        input { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        button { background: #27ae60; color: white; border: none; padding: 12px; width: 100%; border-radius: 6px; font-weight: bold; margin-top: 20px; cursor: pointer; }
+        button:hover { background: #219653; }
+        .error { color: #e74c3c; font-size: 14px; text-align: center; margin-top: 10px; }
+        .back { display: block; text-align: center; margin-top: 15px; color: #666; text-decoration: none; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>სისტემაში შესვლა</h2>
+        {% if error %}<div class="error">{{ error }}</div>{% endif %}
+        <form method="POST">
+            <label>მომხმარებლის სახელი:</label>
+            <input type="text" name="username" required>
+            <label>პაროლი:</label>
+            <input type="password" name="password" required>
+            <button type="submit">შესვლა</button>
+        </form>
+        <a href="/" class="back">← მთავარ გვერდზე დაბრუნება</a>
+    </div>
+</body>
+</html>

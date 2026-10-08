@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>განცხადების დამატება - რაში გამიცვლი</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin: 0 auto;
+        }
+        h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .back {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #3498db;
+        }
+        .back:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>ახალი განცხადების დამატება</h2>
+        
+        <!-- აი აქ არის მთავარი ცვლილება: enctype="multipart/form-data" -->
+        <form method="POST" enctype="multipart/form-data">
+            <label for="title">სათაური:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">აღწერა:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="image">სურათი:</label>
+            <input type="file" id="image" name="image" accept="image/*">
+
+            <button type="submit">დამატება</button>
+        </form>
+
+        <a href="/" class="back">← მთავარ გვერდზე დაბრუნება</a>
+    </div>
+
+</body>
+</html>

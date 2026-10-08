@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>განცხადების დამატება - რაში გამიცვლი</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 600px;
+            background: #fff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            margin: 40px auto;
+        }
+        h2 {
+            margin-top: 0;
+            color: #27ae60;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+        input[type="text"],
+        textarea,
+        select,
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+        textarea {
+            resize: vertical;
+            height: 110px;
+        }
+        button {
+            background-color: #27ae60;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 25px;
+            transition: 0.2s;
+        }
+        button:hover {
+            background-color: #219653;
+        }
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #7f8c8d;
+            font-weight: 600;
+        }
+        .back:hover {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>ახალი განცხადების დამატება</h2>
+        
+        <form method="POST" enctype="multipart/form-data">
+            <label for="title">სათაური:</label>
+            <input type="text" id="title" name="title" required placeholder="მაგ: iPhone 13 კარგი მდგომარეობით">
+
+            <label for="category">კატეგორია:</label>
+            <select id="category" name="category">
+                <option value="ელექტრონიკა">ელექტრონიკა</option>
+                <option value="ტანსაცმელი">ტანსაცმელი</option>
+                <option value="ავეჯი">ავეჯი</option>
+                <option value="სხვა" selected>სხვა</option>
+            </select>
+
+            <label for="description">აღწერა:</label>
+            <textarea id="description" name="description" required placeholder="აღწერე დეტალურად რაში ცვლი და რა მდგომარეობაშია..."></textarea>
+
+            <label for="image">სურათი:</label>
+            <input type="file" id="image" name="image" accept="image/*">
+
+            <button type="submit">განცხადების გამოქვეყნება</button>
+        </form>
+
+        <a href="/" class="back">← მთავარ გვერდზე დაბრუნება</a>
+    </div>
+
+</body>
+</html>
